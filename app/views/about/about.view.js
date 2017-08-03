@@ -4,7 +4,7 @@ angular.module('about', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/about', {
-    templateUrl: 'about/about.template.html',
+    templateUrl: './views/about/about.template.html',
     controller: 'AboutCtrl'
   });
 }])

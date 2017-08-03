@@ -22,7 +22,7 @@ var modules = requireAll(__webpack_require__(3));
 _angular2.default.module('myApp', ['ngRoute', 'ownerDataService', 'projectsDataService', 'menuService', 'topBar', 'myHeader', 'slider', 'intro', 'myFooter', 'copyright', 'home', 'about', 'skills', 'projects', 'contact', 'myApp.view1', 'myApp.view2', 'myApp.version']).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({ redirectTo: '/view1' });
+  $routeProvider.otherwise({ redirectTo: '/home' });
 }]);
 
 /***/ }),

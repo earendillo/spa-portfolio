@@ -52,7 +52,7 @@ angular.module('myApp.view2', ['ngRoute']).config(['$routeProvider', function ($
 
 angular.module('home', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/home', {
-    templateUrl: 'home/home.template.html',
+    templateUrl: './views/home/home.template.html',
     controller: 'HomeCtrl'
   });
 }]).controller('HomeCtrl', ['$scope', 'ownerDataService', function ($scope, ownerDataService) {
@@ -69,7 +69,7 @@ angular.module('home', ['ngRoute']).config(['$routeProvider', function ($routePr
 
 angular.module('about', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/about', {
-    templateUrl: 'about/about.template.html',
+    templateUrl: './views/about/about.template.html',
     controller: 'AboutCtrl'
   });
 }]).controller('AboutCtrl', [function () {}]);
@@ -84,7 +84,7 @@ angular.module('about', ['ngRoute']).config(['$routeProvider', function ($routeP
 
 angular.module('skills', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/skills', {
-    templateUrl: 'skills/skills.template.html',
+    templateUrl: './views/skills/skills.template.html',
     controller: 'SkillsCtrl'
   });
 }]).controller('SkillsCtrl', ['$scope', 'ownerDataService', function ($scope, ownerDataService) {
@@ -101,7 +101,7 @@ angular.module('skills', ['ngRoute']).config(['$routeProvider', function ($route
 
 angular.module('projects', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/projects', {
-    templateUrl: 'projects/projects.template.html',
+    templateUrl: './views/projects/projects.template.html',
     controller: 'ProjectsCtrl'
   });
 }]).controller('Projects', ['$scope', 'projectsDataService', function ($scope, projectsDataService) {
@@ -118,7 +118,7 @@ angular.module('projects', ['ngRoute']).config(['$routeProvider', function ($rou
 
 angular.module('contact', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/contact', {
-    templateUrl: 'contact/contact.template.html',
+    templateUrl: './views/contact/contact.template.html',
     controller: 'ContactCtrl'
   });
 }]).controller('ContactCtrl', ['$scope', 'ownerDataService', function ($scope, ownerDataService) {

@@ -36,11 +36,11 @@ module.exports = {
     views: [
       './view1/view1.js',
       './view2/view2.js',
-      './home/home.view.js',
-      './about/about.view.js',
-      './skills/skills.view.js',
-      './projects/projects.view.js',
-      './contact/contact.view.js'
+      './views/home/home.view.js',
+      './views/about/about.view.js',
+      './views/skills/skills.view.js',
+      './views/projects/projects.view.js',
+      './views/contact/contact.view.js'
     ],
     vendor: ['angular', 'angular-route']
   },

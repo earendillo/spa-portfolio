@@ -4,7 +4,7 @@ angular.module('skills', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/skills', {
-    templateUrl: 'skills/skills.template.html',
+    templateUrl: './views/skills/skills.template.html',
     controller: 'SkillsCtrl'
   });
 }])
