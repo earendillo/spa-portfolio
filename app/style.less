@@ -1,0 +1,456 @@
+@import 'bower_components/reset-css/reset';
+@import 'prefixer.less';
+@fa_path: 'font-awesome/less';
+@import '@{fa_path}/variables.less';
+@import '@{fa_path}/mixins.less';
+@import '@{fa_path}/path.less';
+@import '@{fa_path}/core.less';
+@import '@{fa_path}/icons.less';
+@import '@{fa_path}/larger.less';
+@import url('https://fonts.googleapis.com/css?family=Bellefair|Dosis');
+
+// <top-bar></top-bar>
+// <my-header></my-header>
+// <slider></slider>
+// <intro></intro>
+// <my-footer></my-footer>
+// <copyright></copyright>
+
+@gray: #0099FF;
+@light-gray: #E8BEC0;
+@dark-gray: #1e141c;
+@width: 960px;
+@width100: 100%;
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.component {
+  width: @width100;
+  background-color: inherit;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  font-size: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  overflow: hidden;
+  position: relative;
+}
+
+top-bar {
+  width: @width100;
+  color: @light-gray;
+  background-color: @dark-gray;
+
+
+  nav {
+    height: 60px;
+    margin: 0 auto;
+    width: @width;
+  }
+
+  a {
+    width: 46px;
+    height: 46px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    display: inline;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobile i {
+    padding-left: 15px;
+  }
+
+  .space-around {
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .linkedin, .twitter, .github, .facebook {
+    .circle;
+    background-color: inherit;
+    transition: background-color 0.1s, width 0.1s,
+    height 0.1s, font-size 0.1s;
+  }
+
+  .linkedin:hover {
+    background-color: #0E76A8;
+  }
+
+  .twitter:hover {
+    background-color: #00ACEE;
+  }
+
+  .github:hover {
+    background-color: #000000;
+  }
+
+  .facebook:hover {
+    background-color: #3B5998;
+  }
+
+  .linkedin:active, .twitter:active, .github:active, .facebook:active {
+    width: 35px;
+    height: 35px;
+    font-size: 23px;
+  }
+
+  .desktop {
+    ul {
+      list-style: none;
+      margin:0;
+      padding: 0;
+      display: inline;
+      width: @width100;
+    }
+
+    ul > li {
+      flex-grow: 1;
+      float:left;
+
+      text-align: center;
+      margin: 0;
+      padding: 5px;
+
+      border-bottom: 2px solid @dark-gray;
+
+      transition: border-bottom 0.2s ease;
+    }
+
+    ul > li:not(:focus):hover {
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+      padding: 5px;
+
+      border-bottom: 2px solid #a96689;
+     }
+
+    ul > li:active,
+    ul > li:focus {
+       flex-grow: 1;
+
+       text-align: center;
+       margin: 0;
+       padding: 5px;
+
+       border-bottom: 2px solid #a96689;
+     }
+
+     .selected {
+       border-bottom: 2px solid #a96689;
+     }
+
+    ul > li > a {
+      text-decoration: none;
+
+      font-size: 16px;
+      font-family: "Dosis", serif;
+      color: #E8BEC0;
+    }
+  }
+}
+
+my-header {
+  color: @dark-gray;
+
+  h1 {
+    color: #929196;
+    font-weight: normal;
+    font-family: "Bellefair", serif;
+    font-size: 7vh;
+    text-shadow: 1px;
+  }
+
+  p {
+    color: #E8BEC0;
+    font-weight: normal;
+    font-family: "Dosis", serif;
+    font-size: 4vh;
+    text-shadow: 1px;
+    text-align: left;
+  }
+
+  .text-background {
+    padding: 15px;
+    background: rgba(15, 20, 25, 0.95);
+    border-radius: 15px;
+    background-size:cover;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flex-start {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .placeholder {
+    height: 75vh;
+  }
+}
+
+.fadein {
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+#diamonds {
+    width: 10%;
+    height: 0;
+    position: relative;
+    padding-bottom: 10%;
+    border: solid 1px black;
+    margin: auto;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10%;
+    .center;
+}
+
+.level {
+  -webkit-transform: rotate(-45deg);
+}
+
+.js {
+  background-color: blue;
+  -webkit-transform: translate(0%, 0%) rotate(45deg);
+}
+
+.ng {
+  background-color: yellow;
+  -webkit-transform: translate(-75%, 75%) rotate(45deg);
+}
+
+.node {
+  background-color: red;
+  -webkit-transform: translate(-75%, -75%) rotate(45deg);
+}
+
+.html {
+  background-color: teal;
+  -webkit-transform: translate(-150%, 0%) rotate(45deg);
+}
+
+.css {
+  background-color: teal;
+  -webkit-transform: translate(150%, 0%) rotate(45deg);
+}
+
+.less {
+  background-color: teal;
+  -webkit-transform: translate(75%, 75%) rotate(45deg);
+}
+
+.rwd {
+  background-color: teal;
+  -webkit-transform: translate(0%, -150%) rotate(45deg);
+}
+
+.git {
+  background-color: teal;
+  -webkit-transform: translate(75%, -75%) rotate(45deg);
+}
+
+.wp {
+  background-color: teal;
+  -webkit-transform: translate(0%, 150%) rotate(45deg);
+}
+
+.skills {
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: @light-gray;
+}
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+copyright {
+  color: @light-gray;
+  background-color: @dark-gray;
+}
+
+.deb {
+  border: 1px solid #50FF00;
+}
+
+.mobile-menu {
+  background-color: @dark-gray;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: inherit;
+  }
+
+  ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 3px solid #4C3346
+  }
+
+  ul li a {
+    color: #D4B3C4;
+    font-size: 2em;
+    font-family: "Dosis", serif;
+  }
+}
+
+slider {
+  background-color: @light-gray;
+}
+
+.slider {
+  border-top: 7px solid #E9E9E9;
+  border-bottom: 7px solid #E9E9E9;
+}
+
+my-footer {
+  background-color: #1A1A1A;
+}
+
+@media only screen and (min-width: 961px) {
+  .content:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    display: block;
+    background-image: url('images/lightning.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .component {
+
+    width: @width100;
+  }
+  .mobile {
+    display: none;
+  }
+
+  .top-bar {
+    margin: 0 auto;
+    height: 60px;
+    width: @width;
+  }
+
+  .my-header {
+    margin: 0 auto;
+    width: @width;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .content:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+
+    display: block;
+    background-image: url('images/lightning-tall.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100vh;
+
+    // -webkit-filter: blur(2px);
+    // -moz-filter: blur(2px);
+    // -o-filter: blur(2px);
+    // -ms-filter: blur(2px);
+    // filter: blur(2px);
+  }
+
+  top-bar nav {
+    width: @width100;
+  }
+  .desktop {
+    display: none;
+  }
+}

@@ -1,0 +1,12 @@
+<div class="space-between fadein text-background">
+  <div class="skills">
+    <h3>Skills and tools</h3>
+    <p>As modern front-end engineering is not only about putting HTML and CSS with some interactive features built with JavaScript together,
+      in my routine I use some fancy tools to speed the app development up.</p>
+  </div>
+  <div id="diamonds">
+    <div class="box {{skill.id}}" ng-repeat="skill in owner.skills">
+      <p class="level">{{skill.name}}</p>
+    </div>
+  </div>
+</div>

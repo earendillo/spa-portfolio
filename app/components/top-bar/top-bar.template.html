@@ -1,0 +1,32 @@
+<div class="component">
+  <nav class="space-between">
+    <div class="desktop">
+      <ul class="space-around">
+        <li ng-repeat="item in contentMenuItems" ng-class="{'selected' : selectedItem === item}">
+          <a ng-href="#!{{item.url}}" ng-click=select(item)>{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile">
+      <div ng-click="visible=!visible" class="space-between">
+        <i class="fa fa-bars fa-2x"></i>
+      </div>
+      <div class="mobile-menu" ng-if="visible">
+        <ul>
+          <li ng-repeat="item in contentMenuItems">
+            <a ng-href="#!{{item.url}}">{{item.name}}</a>
+          </li> 
+        </ul>
+     </div>
+   </div>
+   <ul class="space-around">
+     <li ng-repeat="item in socialMenuItems">
+       <a class="center" ng-href="{{item.url}}" target="_blank">
+          <div class="center {{item.social}}">
+            <i class="{{item.faClass}}"></i>
+         </div>
+       </a>
+    </li>
+   </ul>
+  </nav>
+</div>
