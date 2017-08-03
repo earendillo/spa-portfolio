@@ -25,12 +25,7 @@ module.exports = {
       './components/version/version-directive.js',
       './components/version/interpolate-filter.js'
     ],
-    directives: [
-      './components/change-class/change-class.directive.js'
-    ],
     views: [
-      './view1/view1.js',
-      './view2/view2.js',
       './views/home/home.view.js',
       './views/about/about.view.js',
       './views/skills/skills.view.js',
