@@ -1,11 +1,6 @@
 let webpack = require('webpack');
 let path = require('path');
 
-// function requireAll(r) {
-//    r.keys().forEach(r);
-// }
-// requireAll(require.context('./components', true, /\.module\.js$/));
-
 module.exports = {
   context: __dirname + '/app',
   entry: {
